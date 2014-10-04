@@ -1,16 +1,20 @@
 \def \thisling{中文}
 \def \thislang{中文}
 \def \thistext{中文文本}
-\def \olympiad{第六届国际理论, 数理及应用语言学奥林匹克竞赛}
+\def \olympiad{第六届国际理论、数理及应用语言学奥林匹克竞赛}
 \def \pgheader{第六届国际语言学奥林匹克竞赛}
 \def \bulgaria{保加利亚}
 \def \sunbeach{阳光海滩}
-\def \olydates{2008年8月4 — 9日}
+\def \olydates{2008年8月4–9日}
 \def \probindl{个人赛题目}
 \def \solsindl{个人赛解答}
 \def \probteam{团体赛题目}
 \def \soluteam{团体赛解答}
-\def \probword #1{题 \##1}
+\newcommand \siorwu [1]{\if4#1四\else{五}\fi}
+\newcommand \sansiwu [1]{\if3#1三\else{\siorwu{#1}}\fi}
+\newcommand \ersansiwu [1]{\if2#1二\else{\sansiwu{#1}}\fi}
+\newcommand \yiersansiwu [1]{\if1#1一\else{\ersansiwu{#1}}\fi}
+\def \probword #1{第\yiersansiwu{#1}题}
 \def \pontword{分}
 \def \rulesmot{规则}
 \def \regulats{解答规则}
@@ -22,36 +26,36 @@
 \def \goodluck{祝你好运}
 \def \answersp{答案}
 \def \fordinto #1{翻译成#1}
-\def \outdrehu #1{翻译 #1}
+\def \outdrehu #1{翻译#1}
 \def \corrcorr{找出正确的对应关系}
 \def \transcri{转写这些词}
-\def \writorth{用 Listuguj 拼写法拼写}
-\def \macschwa #1{在这个{\tscr}中 #1 $\approx$ 英语 \word{abbot} 中的 \word{o}}
-\def \zoqwedge{$\approx$ 英语 \word{but} 中的 \word{u} }
-\def \oshiroko{相当于 open~\word{o}} % open 怎么翻显得文艺一些呢。。
-\def \eshiroko{$\approx$ 英语~\word{aspen} 中的 \word{a}}
-\def \onororth #1#2#3{#1 $\approx$ 英语 \word{cat} 中的 \word{a}, #2 = 法语 \word{eu} 或德语 \word{ö} (这些字母表示长元音). #3 读作短的 #2}
-\def \owumlaut{= 法语 \word{eu} 或德语 \word{ö}}
-\def \chumlaut{= 法语 \word{eu} 和 \word{u} (德语 \word{ö} 和~\word{ü})}
-\def \uyumlaut{= 法语 \word{u} 或德语 \word{ü}}
-\def \nbsuperw{表示前面的辅音用圆唇发音}
-\def \ruleforw #1#2{字母 #1 表示辅音后圆唇, 而 #2 则不是}
-\def \rquvular #1#2{字母 #1 表示一个 `巴黎的' \word{r} (深喉处发音), 字母 #2 表示同样发音位置的一个如同 \word{k} 的发音}
-\def \mandcons #1#2#3#4{#1 和~#2 与英语硬辅音 \word{sh} 中的 \word{shut} 和 \word{ch} 中的 \word{chuck}, #3 和~#4 相当于英语清辅音 \word{sheet} 中的 \word {sh} 和 \word{cheat} 中的 \word{ch}}
-\def \zoqconsz #1#2{#1 $\approx$ \word{hands} 中的 \word{nds}, #2 = \word{sh}}
-\def \cjmicmac #1#2{#1 = \word{church} 中的 \word{ch}, #2 = \word{judge} 中的 \word{j}}
-\def \spunvoid{是特定的清辅音}
-\def \velarnas{= \word{hang} 中的 \word{ng}}
-\def \palatnas{$\approx$ \word{onion} 中的 \word{ni}}
+\def \writorth{用 Listuguj 正字法拼写}
+\def \macschwa #1{在本{\tscr}中, #1 = 普通话 \word{横} (\word{héng})中的\word{e}}
+\def \zoqwedge{$\approx$ 英语 \word{but} 中的 \word{u}}
+\def \oshiroko{是开元音 \word{o}}
+\def \eshiroko{$\approx$ 英语 \word{aspen} 中的 \word{a}}
+\def \onororth #1#2#3{#1 $\approx$ 英语 \word{cat} 中的 \word{a}, #2 = 汉语拼音 \word{üe}. #3 是 #2 的短音}
+\def \owumlaut{= 汉语拼音 \word{üe}}
+\def \chumlaut{= 法语 \word{eu} 和汉语拼音 \word{ü}}
+\def \uyumlaut{= 汉语拼音 \word{ü}}
+\def \nbsuperw{表示前一个辅音圆唇}
+\def \ruleforw #1#2{字母 #1 代表前一个辅音圆唇或者 #2 音本身}
+\def \rquvular #1#2{字母 #1 约等于汉语拼音 \word{h} 的浊音, 字母 #2 代表一个类似 \word{k} 且在同一部位发声的音}
+\def \mandcons #1#2#3#4{#1 = 汉语拼音 \word{sh}, #2 = 汉语拼音 \word{zh}, #3 = 汉语拼音 \word{x}, #4 = 汉语拼音 \word{j}}
+\def \zoqconsz #1#2{#1 = 汉语拼音 \word{z} 的浊音, #2 = \word{sh}}
+\def \cjmicmac #1#2{#1 = 英语 \word{church} 中的 \word{ch}, #2 = 英语 \word{judge} 中的 \word{j}}
+\def \spunvoid{是特殊的非浊辅音}
+\def \velarnas{= 普通话 \word{杭} (\word{háng})中的\word{ng}}
+\def \palatnas{$\approx$ 普通话 \word{娘} (\word{niáng})中的\word{ni}}
 \def \jotisjot{nay}
-\def \jotsound{= \word{yay!} 中的 \word{y}}
-\def \tsaffric{$\approx$ \word{hats} 中的 \word{ts} (作为单辅音发音)}
-\def \frivelar{= 苏格兰语 \word{loch} 中的 \word{ch}}
-\def \dittovoi{的发音没有变, 但是需要浊化}
-\def \glotstop{是一种特定的辅音 (所谓的声门{\stp})}
-\def \retrflex{$\approx$ \word{word} 和 \word{art} 中的 \word{d} 和 \word{t}, 发音时舌尖向后}
-\def \thorneth #1#2#3{英语 #2 和 #3 中的 #1 }
-\def \singsyll{作为单音节发音}
+\def \jotsound{= 汉语拼音 \word{y}}
+\def \tsaffric{= 汉语拼音 \word{z}}
+\def \frivelar{= 汉语拼音 \word{h}}
+\def \dittovoi{是其浊音}
+\def \glotstop{是一个特殊的辅音 (声门{\stp})}
+\def \retrflex{$\approx$ 英语 \word{word} 和 \word{art} 中的 \word{d} 和 \word{t}, 发音时卷舌}
+\def \thorneth #1#2#3{分别为英语 #2 和 #3 中的 #1}
+\def \singsyll{的发音为单音节}
 \def \hetteken{标记}
 \def \aspirath{表示前面的{\stp}辅音需要送气 (发音时出气)}
 \def \longmark{表示长元音}
@@ -61,56 +65,56 @@
 \def \rulestop #1#2#3{#1 在词首或元音之间读作\voicon{} (#2) ,  在词尾或临近另一个辅音读作清辅音 (#3) }
 \def \incanada{在加拿大}
 \def \northcan{在加拿大北部}
-\def \inchiapa{在墨西哥南部的 Chiapas 省}
+\def \inchiapa{在墨西哥南部的恰帕斯州}
 \def \spokenca #1#2{#2, 约有#1人使用该语言}
-\def \drehname{Drehu 语}
-\def \drehspok #1{在新喀里多尼亚东部的利富岛，有超过 #1 人使用 Drehu 语}
-\def \indrehus{在 Drehu}
-\def \cemuname{Cemuhî 语}
-\def \cemuspok #1{在新喀里多尼亚的东部海岸约有 #1 人使用 Cemuhî 语}
+\def \drehname{利富语}
+\def \drehspok #1{在新喀里多尼亚东部的利富岛上, 超过#1人在使用利富语}
+\def \indrehus{在利富语中}
+\def \cemuname{卡穆希语}
+\def \cemuspok #1{在新喀里多尼亚东海岸, 约有#1人使用卡穆希语}
 \def \inukname{因纽特语}
-\def \geninukt{因纽特语 (加拿大因纽特) 属于爱斯基摩-阿留申语系}
-\def \zoquenom{Copainalá Zoque}
-\def \genzoque #1{ #1 语属于 Mixe-Zoque 语系}
-\def \bothaune{两种语言都属于南岛语系}
-\def \gemicmac{米克玛克语是一种阿尔冈昆语}
-\def \inmicmac{下面是以所谓的 Listuguj 拼写法拼写的米克玛克语的单词, 他们的语音{\tscr}及汉语翻译}
-\def \indrecem{下面是两种新喀里多尼亚语言的单词和词组}
-\def \giveword #1{下面是 #1 中的词语}
-\def \inscalds #1{下面是四段于公元900年创作的古诺斯语诗的摘抄. 他们全部根据名为 #1 (lit.`court meter')的meter书写} % 这个meter到底是个神马。。
-\def \insentin #1{下面是 #1 中的语句}
-\def \redrecem #1#2{下面是几个从 #1 翻译成 #2 的词语}
-\def \dqstanza{下面是一篇被抹去13个词语的诗节}
-\def \theirtra{他们的汉语翻译}
-\def \chaotict{（乱序）}
-\def \cdaskone #1#2#3#4{你认为单词 #1 和 #3 分别在 #2 和 #4 中是什么意思}
-\def \cdasktwo #1#2#3#4#5{在 #1 中 #2 就是 `#3' ,  #4 就是 `#5'}
+\def \geninukt{因纽特语 (加拿大因纽特语) 属于爱斯基摩-阿留申语系}
+\def \zoquenom{索克语 (Copainalá 变体) }
+\def \genzoque #1{#1属于米塞-索克语系}
+\def \bothaune{两种语言均属于南岛语系}
+\def \gemicmac{米克马克语是一种阿尔冈昆语}
+\def \inmicmac{下面是以被称为 Listuguj 的正字法拼写地米克马克语的单词, 它们的语音{\tscr}及汉语翻译}
+\def \indrecem{下面是新喀里多尼亚两种语言的单词和词组}
+\def \giveword #1{下面是#1的单词}
+\def \inscalds #1{下面是古诺尔斯语诗歌的四个片段, 编写于公元九百年前后. 它们均遵循韵律 #1 (字面意义 ‘宫廷韵律’)}
+\def \insentin #1{下面是#1的句子}
+\def \redrecem #1#2{这里还给出了几个#1单词的#2翻译}
+\def \dqstanza{下面给出一节诗, 其中十三个词被删去}
+\def \theirtra{其汉语翻译}
+\def \chaotict{ (乱序排列)}
+\def \cdaskone #1#2#3#4{你觉得#2单词 #1 以及 #4单词 #3 是什么意思}
+\def \cdasktwo #1#2#3#4#5{在#1中, #2 是指 ‘#3’, #4 是指 ‘#5’}
 \def \allitera{头韵}
-\def \videstat{见题目的陈述部分}
-\def \allitert #1{头韵是 #1 的一个主要原则}
-\def \alliterh{每一联（两行）的第一行都包含两个互押头韵的词语, 并且第二行的首个单词也押相同的音}
-\def \vocallit #1{所有的元音都互相并且和 #1 押韵}
-\def \nunirule{但这并不是所有的规则}
-\def \mdiffers{上面的文本都是从一个以上的手稿中摘抄下来的}
-\def \mvariats{有时不同文本的相应位置会出现词语的不同变体, 而学者们必须从这些变体中判断哪些是原版}
-\def \huchoose{不同的思考会推动结论的发现. 有时诗篇的规则会帮助判读哪些变体是错误的}
-\def \nonlybut #1#2#3{例如, 在行 #1 我们不仅会找到 #2, 还会找到 #3}
-\def \outother #1#2{就会根据诗的结构而被排除, 但是 #1 和 #2 都适合此行, 所以我们需要其他原因来推敲这些词语.}
-\def \drotqtri #1#2#3{在行 #1 中 #2 和 #3 出现在手稿中, 但是 #3 并不满足诗的要求.}
-\def \vadrules #1{描述你在 #1 中观察到的一联诗中的规则}
-\def \dqfiller{下表中包含所有13个被抹去的词语(按字母顺序)和两个不属于诗节 V 的词语}
-\def \fillgaps{填补诗节 V 中的空白}
-\def \wwonorse{古诺斯语是一种北日耳曼语. 大约在公元700年至1000年有人使用过.} 
-\def \onornorm{题目中所有诗歌的范例都以标准化的拼写给出, 并且符合所有题材上的规则}
+\def \videstat{见题目陈述}
+\def \allitert #1{#1 的一个主要规则是头韵}
+\def \alliterh{每一联（两行）的第一行包含两个首音相同单词, 且第二行的第一个单词亦是由此音开头}
+\def \vocallit #1{任意两个元音均押韵, 且均与 #1 押韵}
+\def \nunirule{但这不是唯一的规则}
+\def \mdiffers{不止一份上述文本的手抄本传承下来}
+\def \mvariats{有时候在文本的相应位置出现了不同的单词, 学者需判断哪种变体为原文}
+\def \huchoose{不同的考虑可能影响结论. 有时候诗律规则有助于确定某些错误变体}
+\def \nonlybut #1#2#3{比如, 在行 #1 中我们不仅仅发现 #2, 也发现了 #3}
+\def \outother #1#2{可以根据诗的结构排除, 但 #1 和 #2 都可接受, 因此人们需要其他理由来选择单词.}
+\def \drotqtri #1#2#3{在行 #1 中, #2 和 #3 均出现在手抄本中, 但 #3 并不满足诗的要求.}
+\def \vadrules #1{描述在 #1 中的一联诗中观察到的规则}
+\def \dqfiller{下表包含了 (按字母序排列) 删去的13个单词以及两个不属于诗节 V 的单词}
+\def \fillgaps{填补诗节 V 中的空}
+\def \wwonorse{古诺尔斯语是一种北日耳曼语，在公元七百年至一千一百年左右使用}
+\def \onornorm{本题的全部诗篇均以规范化的正字法给出并符合这一体裁的规则}
 \def \qtysylla{音节数. 每行有六个音节}
 \def \inrhymes{中韵}
 \def \inrhymep{将每行的元音 (和复合元音) 标示成}
-\def \inrhymeq #1#2{至少有一个辅音直接接在 V$_5$ 后面也会直接接在 #1 #2 后面}
-\def \inrhymer{并且, 偶数行}
-\def \egdrotts #1{例如, cf.\ 行 #1 (头韵用粗体标出, 中韵用下划线标出)} % cf.\ 是什么东东呢。。。
-\def \excesswd{剩余的词语}
-\def \autelexp{圣所是一座教堂中最神圣主要的部分}
-\def \autelmot{圣所}
+\def \inrhymeq #1#2{V$_5$ 后的至少一个辅音也会出现在 #1 #2 的后面}
+\def \inrhymer{且偶数行中}
+\def \egdrotts #1{例如行 #1 (头韵用粗体标出, 中韵用下划线标出)}
+\def \excesswd{多余的词语}
+\def \autelexp{圣地是教堂最为重要神圣的部分}
+\def \autelmot{圣地}
 \def \abeilles{一群蜜蜂}
 \def \abeillex{蜜蜂}
 \def \abeimult{蜜蜂}
@@ -120,14 +124,14 @@
 \def \bananasz{一串香蕉}
 \def \bananawd{香蕉}
 \def \biblemot{圣经}
-\def \boiremis{用来喝的}
+\def \boiremis{饮用}
 \def \bonemult{骨头}
 \def \boneword{骨头}
 \def \calendar{日历}
-\def \carrelet{锥子}
-\def \costemot{岸}
+\def \carrelet{钻子}
+\def \costemot{海岸}
 \def \dimanche{星期天}
-\def \dormimot{用来睡觉}
+\def \dormimot{睡觉}
 \def \ecclesia{教堂}
 \def \esperonx{马刺}
 \def \esperony{戳动物的工具}
@@ -139,88 +143,88 @@
 \def \holytome{神圣的}
 \def \homegran{房子}
 \def \homeword{房子}
-\def \jourmult{日期}
-\def \jourword{日期}
+\def \jourmult{日子}
+\def \jourword{日子}
 \def \kurkalem{铅笔}
 \def \litparol{床}
-\def \multitud #1{大量的#1}
+\def \multitud #1{#1的复数}
 \def \murparol{墙}
-\def \nuitgran{黑夜}
+\def \nuitgran{夜晚}
 \def \piquemis{用来戳的}
-\def \piquemot{用来戳的}
+\def \piquemot{戳}
 \def \tool #1{#1工具}
-\def \postdorm{用来睡觉的地方}
+\def \postdorm{睡觉的地方}
 \def \postword{地方}
 \def \schrimis{用来写的}
-\def \schrimot{用来写} 
+\def \schrimot{写}
 \def \skeleton{骨架}
 \def \tomeword{书}
 \def \twilight{黄昏}
 \def \verremot{杯子}
-\def \shamanex{萨满在某些文化中可能是牧师, 术士或医师}
-\def \thejager{猎人}
-\def \deshaman{萨满}
+\def \shamanex{萨满是某些文化中的祭祀, 男巫以及医师}
+\def \thejager{这个猎人}
+\def \deshaman{这位萨满}
 \def \sinukoer{你的狗}
-\def \inuktitq{你来了}
+\def \inuktitq{你来过了}
 \def \inuktitk{你摔倒了}
-\def \inuktitl{你伤到了你自己}
-\def \shottest #1{你射杀#1}
-\def \inuktitr{你治愈了猎人}
-\def \inuktitc{你刺穿了狗}
-\def \adogword{一只狗}
-\def \tteacher{教师}
-\def \inuktitj{一位医生}
-\def \inuktitw{伤到了一位教师}
-\def \inuktits{伤到了你}
-\def \inuktitb{看到了你}
-\def \inuktitg{刺穿了狼}
-\def \inuktiti{射杀一只北极熊}
-\def \inuktitf{男孩射杀了医生}
-\def \inuktite{狗伤到了教师}
-\def \inuktitm{狼看见了你的萨满}
+\def \inuktitl{你伤了你自己}
+\def \shottest #1{你射了#1}
+\def \inuktitr{你治好了一个猎人}
+\def \inuktitc{你刺了那条狗}
+\def \adogword{一条狗}
+\def \tteacher{这位老师}
+\def \inuktitj{治好了一个医生}
+\def \inuktitw{伤了一位老师}
+\def \inuktits{伤了你}
+\def \inuktitb{看见过你}
+\def \inuktitg{刺了那匹狼}
+\def \inuktiti{射了一只北极熊}
+\def \inuktitf{这个男孩射了那个医生}
+\def \inuktite{这条狗伤了你的老师}
+\def \inuktitm{这匹狼看见过你的萨满}
 \def \inuktitu{你的狼摔倒了}
-\def \inuktith{北极熊来了}
-\def \inuktitn{你的北极熊伤到了一个男孩}
-\def \inuktita{医生治愈了你}
-\def \inuktitd{你的医生治愈了你的男孩}
-\def \inuktito{你的猎人治愈了他自己}
-\def \inuktitt{教室看到了男孩}
-\def \withword{`和'}
+\def \inuktith{这只北极熊来了}
+\def \inuktitn{你的北极熊伤害了一个男孩}
+\def \inuktita{这个医生治好了你}
+\def \inuktitd{你的医生治好了你的男孩}
+\def \inuktito{你的猎人治好了他自己}
+\def \inuktitt{这位老师看到了那个男孩}
+\def \withword{‘和’}
 \def \forparol{为了}
 \def \abovemot{上方}
 \def \renderpl{复数}
-\def \zadiente{为了牙（复数）}
-\def \zacourge{为了壁球}
-\def \courges{壁球（复数）}
-\def \cucourge{和壁球}
-\def \nakpat{一只仙人掌}
-\def \kittel{一只水壶}
-\def \zakittels{为了水壶（复数）}
-\def \sukumguy{城镇上方}
-\def \zakumguys{为了城镇（复数）}
+\def \zadiente{为了这颗牙齿}
+\def \zacourge{为了这颗小果南瓜}
+\def \courges{一些小果南瓜}
+\def \cucourge{带着南瓜小果}
+\def \nakpat{一株仙人掌}
+\def \kittel{一个水壶}
+\def \zakittels{为了这些水壶}
+\def \sukumguy{在这座小镇上方}
+\def \zakumguys{为了这些小镇}
 \def \balkan{一座山}
-\def \balkanes{山}
-\def \cumokmok{和玉米}
-\def \cumikittel{和我的水壶}
-\def \mimokmok{我的玉米}
-\def \mipillar{我的邮件}
-\def \sumihimmel{我的天空上方}
-\def \supillar{邮件上方}
-\def \pillars{邮件（复数）}
-\def \tudientes{你的牙}
-\def \cutunakpat{和你的仙人掌（复数）}
-\def \tukumguy{你的城镇}
-\def \tucaycay{你的藤蔓}
+\def \balkanes{群山}
+\def \cumokmok{带着小麦}
+\def \cumikittel{带着我的水壶}
+\def \mimokmok{我的小麦}
+\def \mipillar{我的柱子}
+\def \sumihimmel{在我的这片天空上方}
+\def \supillar{在这些柱子上方}
+\def \pillars{这些柱子}
+\def \tudientes{你的牙齿 (复数)}
+\def \cutunakpat{带着你的仙人掌}
+\def \tukumguy{你的小镇}
+\def \tucaycay{你的葡萄藤}
 \def \himmel{一片天空}
 \def \poxkuy{一把椅子}
-\def \zapoxkuy{为了椅子}
-\def \supoxkuys{椅子（复数）上方}
-\def \zacaycay{为了藤蔓}
-\def \sucaycay{藤蔓上方}
-\def \shadow{一片阴影}
-\def \shadows{阴影（复数）}
-\def \sushadows{阴影（复数）上方}
-\def \cushadow{和阴影}
+\def \zapoxkuy{为了这把椅子}
+\def \supoxkuys{在这些椅子上方}
+\def \zacaycay{为了这株葡萄藤}
+\def \sucaycay{在这株葡萄藤上方}
+\def \shadow{一个影子}
+\def \shadows{许多影子}
+\def \sushadows{在这些影子上方}
+\def \cushadow{带着这个影子}
 \def \axeparol{斧头}
 \def \unsafewd{不安全}
 \def \arxangel{天使长}
@@ -241,7 +245,7 @@
 \def \snakemot{蛇}
 \def \lookroon{环顾四周}
 \def \therefor{所以, 因此}
-\def \defobj #1{明确的物体}
+\def \defobj #1{有定物体}
 \def \cedreord{在这两种语言中, 修饰语后置}
 \def \instruct{因纽特语具有下列基本结构}
 \def \wherinuk #1#2{其中 #1 是名词,  #2 是动词}
@@ -308,10 +312,10 @@
 \def \humandar{可以总结出哪些在普通话中读\fqts{}的音调的规则?}
 \def \rarewhat{一些初始的辅音和音调组合在现代普通话中极为罕见. 哪些呢?}
 \def \supptone{判断出遗失的音调是哪些}
-\def \readfoll #1{给出下面的\tscr#1的读法}
+\def \readfoll #1{给出下面的{\tscr}#1的读法}
 \def \incanton{在广东话中}
 \def \inmandar{在普通话中}
-\def \infohave{一些{\tscr}本不可读, 但这道题包含了足以读出他们的信息}
+\def \infohave{一些{\tscr}本不可读, 但这道题包含了足以读出它们的信息}
 \def \triparts{汉语音节由三部分组成}
 \def \onrimton{声母 (首辅音, 可能不存在如 3B), 韵母 (后面的所有音) 和声调}
 \def \cantones #1#2{广东话音调可以认为存在两种不同的性质: 音高 (#1) 和轮廓 (#2).}
@@ -371,31 +375,31 @@
 \def \enqueted{你觉得哪道题最简单?}
 \def \keredomo{然而,}
 \def \alwaysso{全部都是}
-\def \eg{例如,}
+\def \eg{如}
 \def \et{和}
 \def \au{或}
-\def \Vhimself{\textsf{V} (他自己)}
-\def \aYrender{一个 \textsf{Y}} % a 就翻译成“一个”可以么。。
-\def \theYrend{\textsf{Y}}
+\def \Vhimself{\textsf{V} (自己)}
+\def \aYrender{某个 \textsf{Y}}
+\def \theYrend{那个 \textsf{Y}}
 \def \solo{仅仅}
 \def \just{就}
 \def \rite{恰好}
 \def \como{像}
-\def \cosi{好像}
+\def \cosi{仿佛}
 \def \ABname{Alexander Berdichevsky}
-\def \BBname{博日达尔·博扎诺夫}			% Bozhidar Bozhanov
+\def \BBname{Bozhidar Bozhanov}
 \def \SBname{Svetlana Burlak}
-\def \DGname{德米特里·格拉西莫夫}			% Dmitry Gerasimov
-\def \XGname{克谢尼娅·吉利亚洛娃}			% Ksenia Gilyarova
+\def \DGname{Dmitry Gerasimov}
+\def \XGname{Ksenia Gilyarova}
 \def \IGname{Ivaylo Grozdev}
-\def \SGname{斯坦尼斯拉夫·古列维奇}		% Stanislav Gurevich
-\def \IDname{戴谊凡 (伊万·德尔然斯基)}		% Ivan Derzhanski
+\def \SGname{Stanislav Gurevich}
+\def \IDname{Ivan Derzhanski}
 \def \AHname{Adam Hesterberg}
-\def \BIname{鲍里斯·伊奥姆丁}				% Boris Iomdin
+\def \BIname{Boris Iomdin}
 \def \IIname{Ilya Itkin}
 \def \RPname{Renate Pajusalu}
-\def \APname{亚历山大·皮佩尔斯基}			% Alexander Piperski
-\def \MRname{玛丽娅·鲁宾斯坦}				% Maria Rubinstein
+\def \APname{Alexander Piperski}
+\def \MRname{Maria Rubinstein}
 \def \LFname{Ludmilla Fedorova}
 \def \TTname{Todor Tchervenkov}
 \def \LMSname{刘闽晟}
@@ -403,16 +407,3 @@
 \def \edinames{\ABname, \BBname, \SBname, \IDname\ (\edinchef), \LFname, \DGname, \XGname, \IGname, \SGname, \AHname, \BIname, \IIname, \RPname, \APname, \MRname, \TTname}
 \def \whowroti{\LMSname, \LHname}
 \def \whowrotj{\LMSname, \LHname}
-
-% READ ME！
-
-% 关于翻译中的问题：	
-% 某些语言名称的中文翻译我查不到；
-% voiced和voiceless都是清(辅)音么；
-% contour翻译成“起伏”怎么样？
-% 所以的“它”都被翻译成了“他”。
-% 对于某些好长(也可能不是很长)的句子，我可能翻译的不太通顺
-% 细节上还需调整润色，可能有专家前后浏览一遍就能看出来是不同的人翻译的（假设他不看我们的名字）
-% 题我没做，，LMS的翻译我只是粗略的浏览了一下
-% 我书读的少，，不要骂我。。。
-

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+cd ../../..
+utils/RemoveSpace/RemoveSpace.mac src/IOL.cn/IOL6/dxIOL6CN.tex src/IOL.cn/IOL6/IOL6.tex src/IOL.cn/IOL6/IOL6.nospace.tex
+cd src/IOL.cn/IOL6
+
+rm *.pdf
+
+# We have not yet decided whether to use Founder's typefaces.
+# cp ../font-selector.tex ./
+
+xelatex -shell-escape iol-2008-indiv-prob.cn.tex
+xelatex -shell-escape iol-2008-indiv-solu.cn.tex
+xelatex -shell-escape iol-2008-team-prob.cn.tex
+xelatex -shell-escape iol-2008-team-solu.cn.tex
+
+rm *.aux
+rm *.log
+
+mv *.pdf ../../../PDFs/
